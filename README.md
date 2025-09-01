@@ -66,9 +66,7 @@
 
 
 
-#(if you're using nvidia)
-
-**sudo <- download with**
+**(if you're using nvidia) sudo <- download with**
 
 -nvidia
 
