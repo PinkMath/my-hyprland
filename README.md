@@ -1,7 +1,8 @@
 ###    REQUISITES/not needed    ###
 
 
-**sudo**
+
+**sudo <- download with**
 
 -flatpak
 
@@ -37,7 +38,9 @@
 
 -htop(not needed)
 
-**flatpak**
+
+
+**flatpak <- download with**
 
 -Vesktop (Discord)(not needed)
 
@@ -48,21 +51,24 @@
 -Sober (Roblox)(not needed)
 
 
-**git**
+
+**git <- download with**
 
 -yay
 
 
-**yay**
+
+**yay <- download with**
 
 -swww
 
 -hyprshot
 
 
+
 #(if you're using nvidia)
 
-**sudo**
+**sudo <- download with**
 
 -nvidia
 
