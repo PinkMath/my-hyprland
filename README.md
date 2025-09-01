@@ -6,7 +6,7 @@
 <img width="350" alt="Image" src="https://github.com/user-attachments/assets/e6f8caff-41a8-4a2b-be7f-ded87daab4bd" />
 </div>
 
-###    REQUISITES/not needed    ###
+###    REQUISITES    ###
 
 
 
@@ -32,31 +32,31 @@
 
 -cava
 
--sxiv(not needed)
+-sxiv
 
--mesa-utils(not needed)
+-mesa-utils
 
--vdpauinfo(not needed)
+-vdpauinfo
 
--libva-utils(not needed)
+-libva-utils
 
--xdg-desktop-portal(not needed)
+-xdg-desktop-portal
 
--xdg-desktop-portal-hyprland(not needed)
+-xdg-desktop-portal-hyprland
 
--htop(not needed)
+-htop
 
 
 
 **flatpak <- download with**
 
--Vesktop (Discord)(not needed)
+-Vesktop (Discord)
 
--Spotify (Spotify)(not needed)
+-Spotify (Spotify)
 
--Steam (Steam)(not needed)
+-Steam (Steam)
 
--Sober (Roblox)(not needed)
+-Sober (Roblox)
 
 
 
@@ -80,5 +80,5 @@
 
 -nvidia-utils
 
--nvidia-settings(not needed)
+
 
