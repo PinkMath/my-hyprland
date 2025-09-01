@@ -1,7 +1,8 @@
 (if you'd like change something, go to (~/.config/hypr/hyprland.conf))
-#########################
+
+
 ###   keyboard keys   ###
-#########################
+
 
 
 alt + q -> close window
@@ -28,9 +29,9 @@ SUPER + s -> launcher spotify-launcher
 SUPER + space -> fly window
 
 
-#########################
+
 ### TERMINAL COMMANDS ###
-#########################
+
 
 
 resetwaybar -> reset the waybar
@@ -39,9 +40,9 @@ cleanshot -> clean the screenshots
 nvidia -> use this command after update a nvidia driver (if you're using nvidia) and update a driver use this command
 
 
-#########################
+
 ###   windows rules   ###
-#########################
+
 
 
 #workspace 1
@@ -66,9 +67,9 @@ silent, steam - friend list
 silent, steam - sign in on steam
 
 
-########################
+
 ###       FLOAT      ###
-########################
+
 
 
 steam - fliend list
@@ -77,9 +78,9 @@ sober - servers
 firefox - picture-in-picture
 
 
-########################
+
 ###   MY PROGRAMS    ###
-########################
+
 
 
 $terminal = kitty
@@ -87,9 +88,7 @@ $fileManager = dolphin
 $menu = rofi -show drun
 
 
-########################
 ###    AUTO START    ###
-########################
 
 
 waybar
@@ -97,9 +96,8 @@ swww-daemon
 firefox
 
 
-########################
 ###    REQUISITES    ###
-########################
+
 
 #sudo
 flatpak
