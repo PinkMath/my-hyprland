@@ -45,6 +45,12 @@
 
 -xdg-desktop-portal-hyprland
 
+-p7zip
+
+-unrar
+
+-unzip
+
 -htop
 
 
