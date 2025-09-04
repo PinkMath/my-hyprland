@@ -28,30 +28,17 @@ SUPER + space -> fly window
 
 
 #########################
-### TERMINAL COMMANDS ###
-#########################
-
-
-resetwaybar -> reset the waybar
-update -> update the system
-cleanshot -> clean the screenshots
-nvidia -> use this command after update a nvidia driver (if you're using nvidia) and update a driver use this command
-
-
-#########################
 ###   windows rules   ###
 #########################
 
 
 #workspace 2
-vscode
-
-
-#workspace 4
 silent, vesktop
 silent, vesktop - launcher
 silent, spotify
 
+#workspace 3
+vscode
 
 #workspace 5
 silent, steam
