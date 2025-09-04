@@ -5,87 +5,63 @@
   <img width="350" alt="Image" src="https://github.com/user-attachments/assets/eedb022c-0049-44c7-8b99-56282d1d49ca" />
   <img width="350" alt="Image" src="https://github.com/user-attachments/assets/e6f8caff-41a8-4a2b-be7f-ded87daab4bd" />
   <img width="350" alt="Image" src="https://github.com/user-attachments/assets/ad59e9af-2f24-4691-86a1-da63d8f846fb" />
+  <img width="350" alt="Image" src="https://github.com/user-attachments/assets/75afd9a0-5825-44ce-a02d-548e038e3433" />
 </div>
 
+<div align="center">
+  
 ###    REQUISITES    ###
+</div>
 
 
 
-**sudo <- download with**
+**sudo**
 
--flatpak
-
--git
-
--blueman
-
--neovim
-
--kitty
-
--firefox
-
--hyprland
-
--grim
-
--slurp
-
--cava
-
--sxiv
-
--mesa-utils
-
--vdpauinfo
-
--libva-utils
-
--xdg-desktop-portal
-
--xdg-desktop-portal-hyprland
-
--p7zip
-
--unrar
-
--unzip
-
--htop
+```bash
+sudo pacman -S flatpak git blueman neovim kitty hyprland grim slurp cava sxiv mesa-utils vdpauinfo libva-utils xdg-desktop-portal xdg-desktop-portal-hyprland p7zip unrar unzip htop
+```
 
 
-
-**flatpak <- download with**
+**flatpak**
 
 -Vesktop (Discord)
+```bash
+flatpak install flathub dev.vencord.Vesktop
+```
 
 -Spotify (Spotify)
+```bash
+flatpak install flathub com.spotify.Client
+````
 
 -Steam (Steam)
+```bash
+flatpak install flathub com.valvesoftware.Steam
+```
 
 -Sober (Roblox)
+```bash
+flatpak install flathub org.vinegarhq.Sober
+```
+
+
+**git**
+
+```bash
+git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si
+```
+
+**yay**
+
+```bash
+yay install swww hyprshot
+```
 
 
 
-**git <- download with**
+  
+**if you're using nvidia**
 
--yay
-
-
-
-**yay <- download with**
-
--swww
-
--hyprshot
-
-
-
-**(if you're using nvidia) sudo <- download with**
-
--nvidia
-
--nvidia-utils
-
-
-
+```bash
+sudo pacman -S nvidia nvidia-utils
+```
