@@ -59,7 +59,7 @@ git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si
 **yay**
 
 ```bash
-yay install swww hyprshot
+yay -S swww hyprshot
 ```
 
 
