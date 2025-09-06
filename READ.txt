@@ -19,12 +19,14 @@ alt + d -> move left
 alt + f -> move down 
 alt + j -> move up 
 alt + k -> move left 
+alt + o -> toggle slit
 alt + space -> launcher menu(to search for programs) 
 ctrl + alt -> change the keyboard language [US, BR] 
 SUPER + b -> launcher Firefox 
 SUPER + d -> launcher Vesktop 
 SUPER + s -> launcher spotify-launcher 
 SUPER + space -> fly window
+SUPER + l -> lock screen
 
 
 #########################
