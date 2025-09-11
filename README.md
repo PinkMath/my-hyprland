@@ -19,7 +19,7 @@
 **sudo**
 
 ```bash
-sudo pacman -S flatpak git blueman neovim kitty hyprland grim slurp cava sxiv mesa-utils vdpauinfo libva-utils xdg-desktop-portal xdg-desktop-portal-hyprland p7zip unrar unzip htop hyprlock starship
+sudo pacman -S flatpak git blueman neovim kitty hyprland grim slurp cava sxiv mesa-utils vdpauinfo libva-utils xdg-desktop-portal xdg-desktop-portal-hyprland p7zip unrar unzip htop hyprlock starship obsidian
 ```
 
 
@@ -55,7 +55,7 @@ git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si
 **yay**
 
 ```bash
-yay -S swww hyprshot
+yay -S swww hyprshot firefox-bin
 ```
 
 
