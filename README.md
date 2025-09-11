@@ -24,7 +24,7 @@ https://github.com/user-attachments/assets/4a3ebe81-d8a3-43f7-98b5-78098d96ced0
 **sudo**
 
 ```bash
-sudo pacman -S flatpak git blueman neovim kitty hyprland grim slurp cava sxiv mesa-utils vdpauinfo libva-utils xdg-desktop-portal xdg-desktop-portal-hyprland p7zip unrar unzip htop hyprlock
+sudo pacman -S flatpak git blueman neovim kitty hyprland grim slurp cava sxiv mesa-utils vdpauinfo libva-utils xdg-desktop-portal xdg-desktop-portal-hyprland p7zip unrar unzip htop hyprlock starship
 ```
 
 
