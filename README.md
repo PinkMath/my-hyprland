@@ -19,7 +19,7 @@
 **sudo**
 
 ```bash
-sudo pacman -S flatpak git blueman nvim kitty hyprland grim slurp sxiv mesa-utils vdpauinfo libva-utils xdg-desktop-portal xdg-desktop-portal-hyprland p7zip unrar unzip htop hyprlock starship obsidian
+sudo pacman -S flatpak git blueman nvim kitty hyprland grim slurp sxiv mesa-utils vdpauinfo libva-utils xdg-desktop-portal xdg-desktop-portal-hyprland p7zip unrar unzip htop hyprlock starship obsidian dunst
 ```
 
 
