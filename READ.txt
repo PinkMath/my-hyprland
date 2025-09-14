@@ -24,7 +24,7 @@ alt + space -> launcher menu(to search for programs)
 ctrl + alt -> change the keyboard language [US, BR] 
 SUPER + b -> launcher Firefox 
 SUPER + d -> launcher Vesktop 
-SUPER + s -> launcher spotify-launcher 
+SUPER + s -> launcher spotify
 SUPER + space -> fly window
 SUPER + l -> lock screen
 
@@ -36,7 +36,6 @@ SUPER + l -> lock screen
 
 #workspace 2
 silent, vesktop
-silent, vesktop - launcher
 silent, spotify
 
 #workspace 3
@@ -44,8 +43,6 @@ vscode
 
 #workspace 5
 silent, steam
-silent, steam - friend list
-silent, steam - sign in on steam
 
 
 ########################
@@ -76,4 +73,6 @@ $menu = rofi -show drun
 
 waybar
 swww-daemon
-firefox
+dunst
+
+vesktop
