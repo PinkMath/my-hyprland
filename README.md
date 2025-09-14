@@ -50,7 +50,9 @@ flatpak install flathub org.vinegarhq.Sober
 **git**
 
 ```bash
-git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si
+git clone https://aur.archlinux.org/yay.git
+cd yay
+makepkg -si
 ```
 
 **yay**
