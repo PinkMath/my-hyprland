@@ -31,11 +31,6 @@ sudo pacman -S flatpak git blueman nvim kitty hyprland grim slurp sxiv mesa-util
 flatpak install flathub dev.vencord.Vesktop
 ```
 
--Spotify (Spotify)
-```bash
-flatpak install flathub com.spotify.Client
-````
-
 -Sober (Roblox)
 ```bash
 flatpak install flathub org.vinegarhq.Sober
