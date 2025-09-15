@@ -26,18 +26,18 @@ sudo pacman -S flatpak git blueman nvim kitty hyprland grim slurp sxiv mesa-util
 
 **flatpak**
 
--Vesktop (Discord)
+-Vesktop (Download Discord)
 ```bash
 flatpak install flathub dev.vencord.Vesktop
 ```
 
--Sober (Roblox)
+-Sober (Download Roblox)
 ```bash
 flatpak install flathub org.vinegarhq.Sober
 ```
 
 
-**git**
+**git** (Download yay)
 
 ```bash
 git clone https://aur.archlinux.org/yay.git
