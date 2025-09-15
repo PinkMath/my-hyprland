@@ -50,12 +50,3 @@ makepkg -si
 ```bash
 yay -S swww hyprshot firefox-bin spotify
 ```
-
-
-
-  
-**if you're using nvidia**
-
-```bash
-sudo pacman -S nvidia nvidia-utils
-```
