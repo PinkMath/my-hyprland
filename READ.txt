@@ -3,13 +3,18 @@
 #####################
 
 
-alt + q -> close window 
-alt + z -> screenshot workspace 
-alt + x -> screenshot region 
-alt + c -> screenshot window 
+#launche
 alt + e -> launche terminal 
+SUPER + b -> launcher Firefox 
+SUPER + d -> launcher Vesktop 
+SUPER + s -> launcher spotify
+SUPER + l -> lock screen
+
+
+#window
+alt + q -> close window 
 alt + mouse -> move the windows or size it 
-alt + [1,2,3,4,...] -> switch workspaces 
+alt + [1,2,3,4,...,9] -> switch workspaces 
 alt + i -> toggle fullscreen 
 alt + d -> focus left 
 alt + f -> focus down 
@@ -20,22 +25,31 @@ alt + f -> move down
 alt + j -> move up 
 alt + k -> move left 
 alt + o -> toggle slit
+SUPER + space -> float window
+
+
+#print
+alt + z -> screenshot workspace 
+alt + x -> screenshot region 
+alt + c -> screenshot window 
+
+
+#rofi
 alt + space -> launche rofi(to search for programs) 
 shift + alt + space -> launche rofi(to change the background)
+
+
+#language
 ctrl + alt -> change the keyboard language [US, BR] 
-SUPER + b -> launcher Firefox 
-SUPER + d -> launcher Vesktop 
-SUPER + s -> launcher spotify
-SUPER + space -> float window
-SUPER + l -> lock screen
 
 
-#spotify - waybar#
+#spotify - waybar
 left-click = pause/play
 right-click = next soung
 scroll-click = come back the soung to the beginning/come back soung
 scroll-up = turn up the volme
 scroll-down = turn down the volume
+
 
 #########################
 ###   windows rules   ###
@@ -59,14 +73,21 @@ steam - games
 ########################
 
 
+#steam
 steam - settings
-volume control
 steam - fliend list
+
+
+#sistem
+volume control
 blueman-manager
-sober - servers
 firefox - picture-in-picture
 obsidian
 kitty
+
+
+#games
+sober - servers
 
 
 ########################
