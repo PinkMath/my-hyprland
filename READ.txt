@@ -20,14 +20,22 @@ alt + f -> move down
 alt + j -> move up 
 alt + k -> move left 
 alt + o -> toggle slit
-alt + space -> launcher menu(to search for programs) 
+alt + space -> launche rofi(to search for programs) 
+shift + alt + space -> launche rofi(to change the background)
 ctrl + alt -> change the keyboard language [US, BR] 
 SUPER + b -> launcher Firefox 
 SUPER + d -> launcher Vesktop 
 SUPER + s -> launcher spotify
-SUPER + space -> fly window
+SUPER + space -> float window
 SUPER + l -> lock screen
 
+
+#spotify - waybar#
+left-click = pause/play
+right-click = next soung
+scroll-click = come back the soung to the beginning/come back soung
+scroll-up = turn up the volme
+scroll-down = turn down the volume
 
 #########################
 ###   windows rules   ###
@@ -40,9 +48,10 @@ silent, spotify
 
 #workspace 3
 vscode
-
-#workspace 5
 silent, steam
+
+#workspace 4
+steam - games
 
 
 ########################
@@ -50,10 +59,14 @@ silent, steam
 ########################
 
 
+steam - settings
+volume control
 steam - fliend list
 blueman-manager
 sober - servers
 firefox - picture-in-picture
+obsidian
+kitty
 
 
 ########################
@@ -64,6 +77,10 @@ firefox - picture-in-picture
 $terminal = kitty
 $fileManager = dolphin
 $menu = rofi -show drun
+$menuBack = ~/.config/hypr/scripts/rofi-wallpaper.sh
+$print = hyprshot -m output -o ~/screenshot/output/
+$printwindow = hyprshot -m window -o ~/screenshot/window/
+$printregion = hyprshot -m region -o ~/screenshot/region/
 
 
 ########################
@@ -74,5 +91,4 @@ $menu = rofi -show drun
 waybar
 swww-daemon
 dunst
-
 vesktop
