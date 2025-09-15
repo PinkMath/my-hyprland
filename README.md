@@ -20,7 +20,7 @@
 **sudo**
 
 ```bash
-sudo pacman -S flatpak git blueman nvim kitty hyprland grim slurp sxiv mesa-utils vdpauinfo libva-utils xdg-desktop-portal xdg-desktop-portal-hyprland p7zip unrar unzip htop hyprlock starship obsidian dunst
+sudo pacman -S flatpak git blueman nvim kitty hyprland grim slurp sxiv mesa-utils vdpauinfo libva-utils xdg-desktop-portal xdg-desktop-portal-hyprland p7zip unrar unzip htop hyprlock starship obsidian dunst steam
 ```
 
 
@@ -35,11 +35,6 @@ flatpak install flathub dev.vencord.Vesktop
 ```bash
 flatpak install flathub com.spotify.Client
 ````
-
--Steam (Steam)
-```bash
-flatpak install flathub com.valvesoftware.Steam
-```
 
 -Sober (Roblox)
 ```bash
