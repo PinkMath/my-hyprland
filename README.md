@@ -20,20 +20,19 @@
 **sudo**
 
 ```bash
-sudo pacman -S flatpak git blueman-manager nvim kitty hyprland grim slurp sxiv mesa-utils vdpauinfo libva-utils xdg-desktop-portal xdg-desktop-portal-hyprland p7zip unrar unzip htop hyprlock starship obsidian dunst steam pavucontol
-```
-
-
-**flatpak**
-
--Vesktop (Download Discord)
-```bash
-flatpak install flathub dev.vencord.Vesktop
-```
-
--Sober (Download Roblox)
-```bash
-flatpak install flathub org.vinegarhq.Sober
+ git
+ blueman
+ bluez
+ nvim
+ kitty
+ hyprland
+ grim
+ slurp
+ sxiv
+ hyprlock
+ starship
+ dunst
+ pavucontol
 ```
 
 
@@ -48,5 +47,6 @@ makepkg -si
 **yay**
 
 ```bash
-yay -S swww hyprshot firefox-bin spotify
+swww
+hyprshot
 ```
