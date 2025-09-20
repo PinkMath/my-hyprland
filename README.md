@@ -21,6 +21,7 @@
 ```bash
  git
  blueman
+ kitty
  bluez
  nvim
  kitty
@@ -48,4 +49,5 @@ makepkg -si
 ```bash
 swww
 hyprshot
+spotify
 ```
