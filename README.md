@@ -50,4 +50,5 @@ makepkg -si
 swww
 hyprshot
 spotify
+firefox-bin
 ```
