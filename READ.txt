@@ -6,26 +6,28 @@
 #launche
 alt + e -> launche terminal 
 SUPER + b -> launcher Firefox 
-SUPER + d -> launcher Vesktop 
-SUPER + s -> launcher spotify
 SUPER + l -> lock screen
+SUPER + s -> spotify
 
 
 #window
 alt + q -> close window 
 alt + mouse -> move the windows or size it 
-alt + [1,2,3,4,...,9] -> switch workspaces 
-alt + i -> toggle fullscreen 
 alt + d -> focus left 
 alt + f -> focus down 
 alt + j -> focus up 
 alt + k -> focus right 
-alt + d -> move left 
-alt + f -> move down 
-alt + j -> move up 
-alt + k -> move left 
+alt + shift + d -> move left 
+alt + shift + f -> move down 
+alt + shift + j -> move up 
+alt + shift + k -> move left 
+alt + i -> toggle fullscreen 
 alt + o -> toggle slit
 SUPER + space -> float window
+
+
+#workspaces
+alt + [1,2,3,4,...,9] -> switch workspaces 
 
 
 #print
@@ -51,43 +53,16 @@ scroll-up = turn up the volme
 scroll-down = turn down the volume
 
 
-#########################
-###   windows rules   ###
-#########################
-
-
-#workspace 2
-silent, vesktop
-silent, spotify
-
-#workspace 3
-vscode
-silent, steam
-
-#workspace 4
-steam - games
-
-
 ########################
 ###       FLOAT      ###
 ########################
-
-
-#steam
-steam - settings
-steam - fliend list
 
 
 #sistem
 volume control
 blueman-manager
 firefox - picture-in-picture
-obsidian
 kitty
-
-
-#games
-sober - servers
 
 
 ########################
@@ -112,4 +87,3 @@ $printregion = hyprshot -m region -o ~/screenshot/region/
 waybar
 swww-daemon
 dunst
-vesktop
