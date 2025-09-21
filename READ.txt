@@ -5,9 +5,8 @@
 
 #launche
 alt + e -> launche terminal 
-SUPER + b -> launcher Firefox 
 SUPER + l -> lock screen
-SUPER + s -> spotify
+SUPER + s -> launche spotify
 
 
 #window
@@ -61,7 +60,6 @@ scroll-down = turn down the volume
 #sistem
 volume control
 blueman-manager
-firefox - picture-in-picture
 kitty
 
 
