@@ -1,0 +1,21 @@
+#
+# ~/.bashrc
+#
+eval "$(starship init bash)"
+# If not running interactively, don't do anything
+[[ $- != *i* ]] && return
+
+alias ls='ls --color=auto'
+alias grep='grep --color=auto'
+PS1='[\u@\h \W]\$ '
+
+alias update='sudo pacman -Syu && sudo pacman -Sy'
+alias cleanshot='rm -rf ~/screenshot/output/* && rm -rf ~/screenshot/region/* && rm -rf ~/screenshot/window/*'
+alias nvidia='sudo mkinitcpio -P'
+alias resetwaybar='killall waybar && hyprctl dispatch exec waybar'
+alias disco='sudo gparted'
+alias cleandownloads='rm -rf ~/ssd/downloads/*'
+alias z="cd"
+
+
+fastfetch
