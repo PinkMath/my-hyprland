@@ -21,7 +21,6 @@
 ```bash
  git
  blueman
- kitty
  bluez
  nvim
  kitty
