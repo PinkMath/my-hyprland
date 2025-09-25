@@ -28,6 +28,7 @@
  grim
  slurp
  sxiv
+ rofi
  hyprlock
  starship
  dunst
