@@ -32,6 +32,7 @@
  hyprlock
  starship
  dunst
+xwaylandvideobridge
  pavucontol
 ```
 
