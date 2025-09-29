@@ -57,3 +57,9 @@ hyprshot
 spotify
 firefox-bin
 ```
+
+# SCRIPT
+
+```bash
+chmod +x ~/.config/hypr/scripts/rofi-wallpaper.sh
+```
