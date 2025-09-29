@@ -2,16 +2,18 @@
 
 
 <div align="center">
-  <img width="500" alt="2025-09-20-065305_hyprshot" src="https://github.com/user-attachments/assets/3ff198ce-136b-4023-acaf-381e00d4a044" />
-  <img width="500" alt="2025-09-20-065056_hyprshot" src="https://github.com/user-attachments/assets/a746971a-0163-4a64-818f-413266338c06" />
-  <img width="500" alt="2025-09-20-065042_hyprshot" src="https://github.com/user-attachments/assets/d787f68c-4d7c-488b-a454-0a812bcf94c8" />
-  <img width="500" alt="2025-09-20-065015_hyprshot" src="https://github.com/user-attachments/assets/fe8ad401-1e2e-4b4a-a5ba-8516d0390fce" />
+  <img width="500" alt="5" src="https://github.com/user-attachments/assets/d5dc3ddb-0d09-4c87-b59d-77a566d752f5" />
+  <img width="500" alt="4" src="https://github.com/user-attachments/assets/83f3634d-a433-4fdc-b9e8-88720bac6630" />
+  <img width="500" alt="3" src="https://github.com/user-attachments/assets/898bcbac-3c7e-4bb2-9a20-7ae94f23a1f3" />
+  <img width="500" alt="2" src="https://github.com/user-attachments/assets/b25f3f03-cf3d-45de-8779-aa74ce3b0a40" />
+  <img width="500" alt="1" src="https://github.com/user-attachments/assets/b6c1aeb5-1b75-4221-bf7c-47813914a3a9" />
+
   <img width="500" alt="Image" src="https://github.com/user-attachments/assets/8379e0e8-8a7b-495c-8ec2-b086da6c2b64" />
 </div>
 
 <div align="center">
   
-###    REQUISITES    ###
+# REQUISITES
 </div>
 
 
@@ -34,6 +36,8 @@
  dunst
  xwaylandvideobridge
  pavucontol
+ nemo
+ cava
 ```
 
 
