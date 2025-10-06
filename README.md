@@ -57,6 +57,7 @@ spotify
 # SCRIPT
 
 </div>
+
 ```bash
 chmod +x ~/.config/hypr/scripts/rofi-wallpaper.sh
 ```
