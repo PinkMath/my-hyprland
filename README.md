@@ -1,6 +1,3 @@
-
-
-
 <div align="center">
   <img width="500" alt="5" src="https://github.com/user-attachments/assets/d5dc3ddb-0d09-4c87-b59d-77a566d752f5" />
   <img width="500" alt="4" src="https://github.com/user-attachments/assets/83f3634d-a433-4fdc-b9e8-88720bac6630" />
@@ -15,8 +12,6 @@
   
 # REQUISITES
 </div>
-
-
 
 **sudo**
 
@@ -38,8 +33,8 @@
  pavucontol
  nemo
  cava
+ firefox
 ```
-
 
 **git** (Download yay)
 
@@ -55,7 +50,6 @@ makepkg -si
 swww
 hyprshot
 spotify
-firefox-bin
 ```
 
 # SCRIPT
