@@ -52,8 +52,11 @@ hyprshot
 spotify
 ```
 
+<div align="center">
+
 # SCRIPT
 
+</div>
 ```bash
 chmod +x ~/.config/hypr/scripts/rofi-wallpaper.sh
 ```
