@@ -57,3 +57,7 @@ spotify
 ```bash
 chmod +x ~/.config/hypr/scripts/rofi-wallpaper.sh
 ```
+
+```bash
+sudo chown {user} ~/*
+```
