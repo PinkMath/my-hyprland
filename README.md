@@ -16,6 +16,7 @@
  blueman
  bluez
  nvim
+ hyprshot
  kitty
  hyprland
  grim
@@ -44,7 +45,6 @@ makepkg -si
 
 ```bash
 swww
-hyprshot
 spotify
 ```
 
