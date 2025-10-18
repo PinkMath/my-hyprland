@@ -11,63 +11,11 @@
 **sudo**
 
 ```bash
+sudo pacman -S base base-devel blueman bluez bluez-utils cava dunst fastfetch firefox flatpak git grim grub htop hyprland hyprshot kitty linux-zen linux-zen-headers nano nemo neovim pavucontrol pipewire-alsa pipewire-jack pipewire-pulse ranger rofi slurp starship sxiv unzip vesktop vulkan-tools waybar wlogout xdg-desktop-portal-wlr xorg-xwayland zram-generator
+```
 
-base
-base-devel
-blueman
-bluez
-bluez-utils
-cava
-dunst
-efibootmgr
-fastfetch
-fd
-firefox
-flatpak
-git
-grim
-grub
-gum
-htop
-hyprland
-hyprshot
-intel-ucode
-kitty
-linux-firmware
-linux-zen
-linux-zen-headers
-lua-language-server
-nano
-nemo
-neovim
-nvidia-dkms
-nvidia-settings
-nvidia-utils
-pavucontrol
-pipewire-alsa
-pipewire-jack
-pipewire-pulse
-qt6-multimedia-ffmpeg
-qt6-svg
-qt6-virtualkeyboard
-ranger
-ripgrep
-rofi
-sddm
-slurp
-starship
-sway
-sxiv
-unzip
-vesktop
-vulkan-tools
-waybar
-wireplumber
-wlogout
-xdg-desktop-portal-wlr
-xorg-xwayland
-zram-generator
-
+```bash
+sudo pacman -S nvidia-dkms nvidia-settings nvidia-utils
 ```
 
 **git** (Download yay)
