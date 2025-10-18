@@ -29,8 +29,7 @@ makepkg -si
 **yay**
 
 ```bash
-swww
-spotify
+yay -S swww spotify
 ```
 
 <div align="center">
