@@ -11,24 +11,63 @@
 **sudo**
 
 ```bash
- git
- blueman
- bluez
- nvim
- hyprshot
- kitty
- hyprland
- grim
- slurp
- sxiv
- rofi
- starship
- dunst
- wong-xwaylandvideobridge
- pavucontol
- ranger
- cava
- firefox
+
+base
+base-devel
+blueman
+bluez
+bluez-utils
+cava
+dunst
+efibootmgr
+fastfetch
+fd
+firefox
+flatpak
+git
+grim
+grub
+gum
+htop
+hyprland
+hyprshot
+intel-ucode
+kitty
+linux-firmware
+linux-zen
+linux-zen-headers
+lua-language-server
+nano
+nemo
+neovim
+nvidia-dkms
+nvidia-settings
+nvidia-utils
+pavucontrol
+pipewire-alsa
+pipewire-jack
+pipewire-pulse
+qt6-multimedia-ffmpeg
+qt6-svg
+qt6-virtualkeyboard
+ranger
+ripgrep
+rofi
+sddm
+slurp
+starship
+sway
+sxiv
+unzip
+vesktop
+vulkan-tools
+waybar
+wireplumber
+wlogout
+xdg-desktop-portal-wlr
+xorg-xwayland
+zram-generator
+
 ```
 
 **git** (Download yay)
