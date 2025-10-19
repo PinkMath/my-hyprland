@@ -11,7 +11,7 @@
 **sudo**
 
 ```bash
-sudo pacman -S xdg-desktop-portal-gnome gnome-desktop gnome-shell xdg-desktop-portal-wlr xorg-xwayland base base-devel blueman bluez bluez-utils cava dunst fastfetch firefox flatpak git grim grub htop hyprland hyprshot kitty linux-zen linux-zen-headers nano nemo neovim pavucontrol pipewire pipewire-alsa pipewire-pulse pipewire-jack ranger rofi slurp starship sxiv unzip vulkan-icd-loader lib32-vulkan-icd-loader waybar xdg-desktop-portal xdg-desktop-portal-gtk xorg-xwayland
+sudo pacman -S xdg-desktop-portal-gnome xdg-desktop-portal-wlr xorg-xwayland base base-devel blueman bluez bluez-utils dunst fastfetch firefox flatpak git grim htop hyprland hyprshot kitty linux-zen linux-zen-headers nano nemo neovim pavucontrol pipewire pipewire-alsa pipewire-pulse pipewire-jack ranger rofi slurp starship sxiv unzip vulkan-icd-loader lib32-vulkan-icd-loader waybar xdg-desktop-portal xdg-desktop-portal-gtk xorg-xwayland
 ```
 <div align="center">
   
