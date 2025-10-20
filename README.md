@@ -63,6 +63,7 @@ sudo chmod +x ~/.config/hypr/scripts/rofi-wallpaper.sh
   
 # turn a file as yours
 </div>
+
 ```bash
 sudo chown {user} {the way to that file}
 ```
