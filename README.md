@@ -60,6 +60,21 @@ yay -S swww spotify wlogout
 sudo chmod +x ~/.config/hypr/scripts/rofi-wallpaper.sh
 ```
 
+# turn a file as yours
 ```bash
-sudo chown {user} ~/*
+sudo chown {user} {the way to that file}
+```
+
+<div align="center">
+
+# FONT
+**Download 0xProto Nerd Font**
+</div>
+
+```bash
+https://www.nerdfonts.com/font-downloads *<-site*
+sudo mkdir -p ~/.local/share/fonts
+sudo mv ~/Download/0xProto.zip ~/.local/share/fonts
+cd ~/.local/share/fonts
+sudo unzip 0xProto.zip
 ```
