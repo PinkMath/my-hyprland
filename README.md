@@ -11,7 +11,7 @@
 **sudo**
 
 ```bash
-sudo pacman -S xdg-desktop-portal-hyprland wireplumber base base-devel blueman bluez bluez-utils dunst fastfetch firefox flatpak git grim htop hyprland hyprshot kitty linux-zen linux-zen-headers nano nemo neovim pavucontrol pipewire pipewire-alsa pipewire-pulse pipewire-jack ranger rofi slurp starship sxiv unzip vulkan-icd-loader lib32-vulkan-icd-loader waybar
+sudo pacman -S xdg-desktop-portal-hyprland wireplumber base base-devel blueman bluez bluez-utils dunst fastfetch firefox flatpak git grim htop hyprland hyprshot kitty linux-zen linux-zen-headers nano nemo neovim pavucontrol pipewire pipewire-alsa pipewire-pulse pipewire-jack ranger rofi slurp starship sxiv unzip waybar
 ```
 <div align="center">
   
@@ -25,8 +25,12 @@ systemctl --user enable pipewire
 ```
 <div align="center">
   
-# NVIDIA
+# NVIDIA / vulkan
 </div>
+
+```bash
+sudo pacman -S vulkan-icd-loader lib32-vulkan-icd-loader
+```
 
 ```bash
 sudo pacman -S nvidia-dkms nvidia-settings nvidia-utils lib32-nvidia-utils
@@ -43,7 +47,7 @@ makepkg -si
 **yay**
 
 ```bash
-yay -S swww spotify wlogout xwaylandvideobridge
+yay -S swww spotify wlogout
 ```
 
 <div align="center">
