@@ -25,7 +25,7 @@ systemctl --user enable pipewire
 ```
 <div align="center">
   
-# NVIDIA / vulkan
+# NVIDIA(dkms) / vulkan
 </div>
 
 ```bash
