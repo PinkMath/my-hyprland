@@ -59,8 +59,10 @@ yay -S swww spotify wlogout
 ```bash
 sudo chmod +x ~/.config/hypr/scripts/rofi-wallpaper.sh
 ```
-
+<div align="center">
+  
 # turn a file as yours
+</div>
 ```bash
 sudo chown {user} {the way to that file}
 ```
