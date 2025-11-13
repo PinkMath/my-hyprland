@@ -50,9 +50,14 @@ makepkg -si
 yay -S spotify wlogout
 ```
 
+<div align="center">
+  
 **wallpaper**
+<br>
 if ur using swww use the script/ in .config/hypr/script/
+<br>
 if ur using hyprpaper use the hyprpeper.conf in .config/hypr/hyprpaper.conf
+</div>
 
 <div align="center">
 
