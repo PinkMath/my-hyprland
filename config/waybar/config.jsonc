@@ -2,79 +2,78 @@
   "layer": "top",
   "position": "top",
   "height": 28,
-  "spacing": 6,
+
+  "margin-top": 0,
+  "margin-left": 300,
+  "margin-right": 300,
+
+  "spacing": 0,
+  "fixed-center": true,
 
   "modules-left": [
-    "hyprland/workspaces",
-    "tray"
+    "pulseaudio",
+    "clock"
   ],
 
   "modules-center": [
-    "clock"
+    "hyprland/workspaces",
+    "custom/magic"
   ],
 
   "modules-right": [
     "network",
-    "pulseaudio",
     "battery",
     "custom/power"
   ],
 
+  "pulseaudio": {
+    "format": " {volume}%",
+    "format-muted": "󰖁 muted",
+    "tooltip": false,
+    "scroll-step": 5,
+    "on-click": "pavucontrol"
+  },
+
+  "clock": {
+    "format": "{:%H:%M}",
+    "tooltip": false
+  },
+
+  "custom/magic": {
+    "format": "󰣐",
+    "tooltip": false,
+    "on-click": "hyprctl dispatch togglespecialworkspace magic"
+  },
+
   "hyprland/workspaces": {
+    "disable-scroll": true,
+    "all-outputs": true,
     "format": "{icon}",
     "format-icons": {
-      "1": "1",
-      "2": "2",
-      "3": "3",
-      "4": "4",
-      "5": "5",
-      "active": "",
-      "default": ""
+      "active": "●",
+      "default": "●"
     },
-    "on-click": "activate",
     "persistent-workspaces": {
       "*": 5
     }
   },
 
-  "clock": {
-    "format": "  {:%H:%M}",
-    "tooltip-format": "  {:%A, %d %B %Y}"
-  },
-
   "network": {
-    "format-wifi": "  {essid}",
-    "format-ethernet": "󰈀  eth",
-    "format-disconnected": "󰖪  off",
-    "tooltip-format": "{ifname}: {ipaddr}"
-  },
-
-  "pulseaudio": {
-    "format": "  {volume}%",
-    "format-muted": "󰝟  muted",
-    "on-click": "pavucontrol"
+    "format-wifi": "󰤨 {essid}",
+    "format-ethernet": "󰈀 wired",
+    "format-disconnected": "󰤭 offline",
+    "tooltip": false
   },
 
   "battery": {
-    "format": "{icon}  {capacity}%",
-    "format-charging": "󰂄  {capacity}%",
-    "format-plugged": "󰚥  {capacity}%",
-    "format-icons": [
-      "󰁺",
-      "󰁻",
-      "󰁼",
-      "󰁽",
-      "󰁾",
-      "󰁿",
-      "󰂀",
-      "󰂁",
-      "󰂂",
-      "󰁹"
-    ]
+    "format": "󰁹 {capacity}%",
+    "format-charging": "󰂄 {capacity}%",
+    "format-plugged": "󰂄 {capacity}%",
+    "tooltip": false
   },
 
   "custom/power": {
-    "format": "",
+    "format": "⏻",
     "tooltip": false,
     "on-click": "wlogout --buttons-per-row 2"
   }
