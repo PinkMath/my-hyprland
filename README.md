@@ -14,9 +14,9 @@ Made for a minimal Wayland desktop with Hyprland, Waybar, Rofi, Kitty, Neovim, D
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/d9c6e2f4-10d0-4b99-88da-76c7ca3c41f7" width="32%" />
-  
+
   <img src="https://github.com/user-attachments/assets/55e4e50f-9679-4d9a-bbce-50158d0dbdad" width="32%" />
-  
+
   <img src="https://github.com/user-attachments/assets/223ee0f4-4068-4420-b06f-cb34a21111cb" width="32%" />
 </p>
 
@@ -162,7 +162,7 @@ The installer can:
 * optionally install MPD/rmpc music packages
 * optionally install NVIDIA packages
 * optionally install `yay`
-* optionally install AUR apps like LibreWolf and Vesktop
+* optionally install AUR apps like Helium-Browser and Vesktop
 * back up existing configs before replacing them
 * copy HyprFlo configs into `~/.config`
 * copy home files like `.zshrc`, `.zprofile`, and `.tmux.conf`
@@ -201,7 +201,7 @@ makepkg -si
 Optional AUR apps:
 
 ```bash
-yay -S --needed librewolf-bin vesktop
+yay -S --needed helium-browser-bin vesktop
 ```
 
 ---
