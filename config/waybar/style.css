@@ -1,107 +1,176 @@
 @import "colors/colors.css";
 
+/* =========================================================
+ * GLOBAL
+ * ========================================================= */
+
 * {
   all: unset;
-  font-family: "Iosevka Nerd Font Propo", "JetBrainsMono Nerd Font", monospace;
+
+  font-family:
+    "Iosevka Nerd Font Propo",
+    "JetBrainsMono Nerd Font",
+    monospace;
+
   font-weight: 700;
+  font-size: 13px;
   min-height: 0;
-}
-
-window#waybar {
-  background-color: @bg0;
-  color: @fg;
-  border-radius: 0 0 9px 9px;
-}
-
-.modules-left {
-  margin-left: 10px;
-}
-
-.modules-center {
-  padding: 0 6px;
-}
-
-.modules-right {
-  margin-right: 10px;
-}
-
-/* LEFT */
-
-#pulseaudio {
-  color: @yellow;
-  font-size: 0.82rem;
-  margin: 0 8px;
-}
-
-/* CENTER */
-
-#clock {
-  color: @fg;
-  font-size: 0.92rem;
-  margin: 0 14px 0 6px;
-}
-
-#custom-magic {
-  color: @orange;
-  font-size: 0.95rem;
-  margin: 0 9px 0 0;
 
   transition:
+    background-color 180ms ease,
     color 180ms ease,
     opacity 180ms ease;
 }
 
-#custom-magic:hover {
-  color: @purple;
-  opacity: 0.85;
+/* =========================================================
+ * BAR
+ * ========================================================= */
+
+window#waybar {
+  background: alpha(@bg0, 0.92);
+  color: @fg;
+
+  border-radius: 0 0 12px 12px;
+
+  border-top: none;
+  box-shadow:
+    0 2px 10px rgba(0, 0, 0, 0.35);
 }
 
+/* =========================================================
+ * MODULE GROUPS
+ * ========================================================= */
+
+.modules-left,
+.modules-center,
+.modules-right {
+  margin-top: 4px;
+  margin-bottom: 4px;
+}
+
+.modules-left {
+  margin-left: 12px;
+}
+
+.modules-right {
+  margin-right: 12px;
+}
+
+.modules-center {
+  padding: 0 8px;
+}
+
+/* =========================================================
+ * SHARED MODULE STYLE
+ * ========================================================= */
+
+#clock,
+#pulseaudio,
+#network,
+#battery,
+#custom-power,
+#custom-magic {
+  padding: 0 6px;
+  border-radius: 8px;
+}
+
+/* =========================================================
+ * LEFT
+ * ========================================================= */
+
+#pulseaudio {
+  color: @yellow;
+}
+
+#pulseaudio:hover {
+  background-color: alpha(@yellow, 0.12);
+}
+
+/* =========================================================
+ * CENTER
+ * ========================================================= */
+
+#clock {
+  color: @fg;
+  padding-right: 10px;
+}
+
+#clock:hover {
+  background-color: alpha(@fg, 0.08);
+}
+
+#custom-magic {
+  color: @orange;
+  margin-right: 4px;
+}
+
+#custom-magic:hover {
+  color: @purple;
+  background-color: alpha(@purple, 0.12);
+}
+
+/* =========================================================
+ * WORKSPACES
+ * ========================================================= */
+
 #workspaces {
-  min-width: 88px;
-  padding: 2px 4px;
-  margin: 9px 0;
-  border-radius: 99px;
+  padding: 2px 6px;
+  margin: 6px 0;
+  border-radius: 999px;
 }
 
 #workspaces button {
   background-color: @bg4;
+
   color: transparent;
-  padding: 0 4px;
-  margin: 0 2px;
-  border-radius: 99px;
-  min-width: 4px;
+
+  min-width: 7px;
+  min-height: 3px;
+
+  margin: 0 3px;
+  padding: 0 3px;
+
+  border-radius: 999px;
 
   transition:
-    min-width 240ms cubic-bezier(0.22, 1, 0.36, 1),
-    background-color 240ms cubic-bezier(0.22, 1, 0.36, 1),
+    min-width 220ms cubic-bezier(0.22, 1, 0.36, 1),
+    background-color 180ms ease,
     opacity 180ms ease;
 }
 
 #workspaces button:hover {
   background-color: @bg1;
+  opacity: 0.9;
 }
 
 #workspaces button.active {
   background-color: @blue;
-  min-width: 1.25rem;
+  min-width: 24px;
 }
 
 #workspaces button.urgent {
   background-color: @red;
+  min-width: 18px;
 }
 
-/* RIGHT */
+/* =========================================================
+ * RIGHT
+ * ========================================================= */
 
 #network {
   color: @purple;
-  font-size: 0.82rem;
-  margin: 0 12px;
+}
+
+#network:hover {
+  background-color: alpha(@purple, 0.12);
 }
 
 #battery {
   color: @green;
-  font-size: 0.82rem;
-  margin-left: 4px;
+}
+
+#battery:hover {
+  background-color: alpha(@green, 0.12);
 }
 
 #battery.charging,
@@ -115,20 +184,26 @@ window#waybar {
 
 #battery.critical {
   color: @red;
+  animation: battery-blink 0.8s infinite alternate;
 }
 
 #custom-power {
   color: @red;
-  font-size: 0.9rem;
-  margin-left: 14px;
-  margin-right: 4px;
 
-  transition:
-    color 180ms ease,
-    opacity 180ms ease;
+  margin-left: 10px;
 }
 
 #custom-power:hover {
   color: @orange;
-  opacity: 0.9;
+  background-color: alpha(@orange, 0.12);
+}
+
+/* =========================================================
+ * ANIMATIONS
+ * ========================================================= */
+
+@keyframes battery-blink {
+  to {
+    opacity: 0.45;
+  }
 }
