@@ -1,209 +1,150 @@
-@import "colors/colors.css";
-
-/* =========================================================
- * GLOBAL
- * ========================================================= */
+@import "./colors.css";
 
 * {
-  all: unset;
-
-  font-family:
-    "Iosevka Nerd Font Propo",
-    "JetBrainsMono Nerd Font",
-    monospace;
-
-  font-weight: 700;
+  border: none;
+  border-radius: 12px;
+  font-family: "JetBrainsMono Nerd Font";
   font-size: 13px;
   min-height: 0;
-
-  transition:
-    background-color 180ms ease,
-    color 180ms ease,
-    opacity 180ms ease;
 }
-
-/* =========================================================
- * BAR
- * ========================================================= */
 
 window#waybar {
-  background: alpha(@bg0, 0.92);
-  color: @fg;
-
-  border-radius: 0 0 12px 12px;
-
-  border-top: none;
-  box-shadow:
-    0 2px 10px rgba(0, 0, 0, 0.35);
+  background: transparent;
+  color: @foreground;
 }
 
-/* =========================================================
- * MODULE GROUPS
- * ========================================================= */
-
-.modules-left,
-.modules-center,
-.modules-right {
-  margin-top: 4px;
-  margin-bottom: 4px;
-}
-
-.modules-left {
-  margin-left: 12px;
-}
-
-.modules-right {
-  margin-right: 12px;
-}
-
-.modules-center {
-  padding: 0 8px;
-}
-
-/* =========================================================
- * SHARED MODULE STYLE
- * ========================================================= */
+/* =========================
+   GLOBAL MODULE STYLE
+========================= */
 
 #clock,
-#pulseaudio,
-#network,
 #battery,
-#custom-power,
-#custom-magic {
-  padding: 0 6px;
-  border-radius: 8px;
+#cpu,
+#memory,
+#network,
+#bluetooth,
+#pulseaudio,
+#backlight,
+#tray,
+#custom-weather,
+#mpris,
+#window,
+#custom-omarchy {
+  background: alpha(@background, 0.92);
+  color: @foreground;
+  padding: 0 14px;
+  margin: 6px 0;
+  border: 1px solid alpha(@foreground, 0.08);
+  transition: all 0.25s ease;
 }
 
-/* =========================================================
- * LEFT
- * ========================================================= */
+/* =========================
+   HOVER EFFECT
+========================= */
 
-#pulseaudio {
-  color: @yellow;
+#clock:hover,
+#battery:hover,
+#cpu:hover,
+#memory:hover,
+#network:hover,
+#bluetooth:hover,
+#pulseaudio:hover,
+#backlight:hover,
+#custom-weather:hover,
+#mpris:hover,
+#custom-omarchy:hover {
+  background: @foreground;
+  color: @background;
 }
 
-#pulseaudio:hover {
-  background-color: alpha(@yellow, 0.12);
+/* =========================
+   LEFT MODULES
+========================= */
+
+#custom-omarchy {
+  padding: 0 16px;
+  font-size: 18px;
+  background: @foreground;
+  color: @background;
 }
 
-/* =========================================================
- * CENTER
- * ========================================================= */
-
-#clock {
-  color: @fg;
-  padding-right: 10px;
-}
-
-#clock:hover {
-  background-color: alpha(@fg, 0.08);
-}
-
-#custom-magic {
-  color: @orange;
-  margin-right: 4px;
-}
-
-#custom-magic:hover {
-  color: @purple;
-  background-color: alpha(@purple, 0.12);
-}
-
-/* =========================================================
- * WORKSPACES
- * ========================================================= */
+/* =========================
+   WORKSPACES
+========================= */
 
 #workspaces {
-  padding: 2px 6px;
+  background: alpha(@background, 0.92);
+  padding: 4px;
   margin: 6px 0;
-  border-radius: 999px;
+  border-radius: 14px;
 }
 
 #workspaces button {
-  background-color: @bg4;
-
-  color: transparent;
-
-  min-width: 7px;
-  min-height: 3px;
-
-  margin: 0 3px;
-  padding: 0 3px;
-
-  border-radius: 999px;
-
-  transition:
-    min-width 220ms cubic-bezier(0.22, 1, 0.36, 1),
-    background-color 180ms ease,
-    opacity 180ms ease;
-}
-
-#workspaces button:hover {
-  background-color: @bg1;
-  opacity: 0.9;
+  color: alpha(@foreground, 0.5);
+  padding: 0 10px;
+  margin: 0 2px;
+  border-radius: 10px;
+  transition: all 0.2s ease;
 }
 
 #workspaces button.active {
-  background-color: @blue;
-  min-width: 24px;
+  background: @foreground;
+  color: @background;
 }
 
-#workspaces button.urgent {
-  background-color: @red;
-  min-width: 18px;
+#workspaces button:hover {
+  background: alpha(@foreground, 0.15);
+  color: @foreground;
 }
 
-/* =========================================================
- * RIGHT
- * ========================================================= */
+/* =========================
+   WINDOW TITLE
+========================= */
 
-#network {
-  color: @purple;
+#window {
+  padding-left: 16px;
+  padding-right: 16px;
 }
 
-#network:hover {
-  background-color: alpha(@purple, 0.12);
+/* =========================
+   MEDIA
+========================= */
+
+#mpris {
+  padding: 0 18px;
+  min-width: 250px;
 }
 
-#battery {
-  color: @green;
-}
-
-#battery:hover {
-  background-color: alpha(@green, 0.12);
-}
-
-#battery.charging,
-#battery.plugged {
-  color: @blue;
-}
+/* =========================
+   BATTERY STATES
+========================= */
 
 #battery.warning {
-  color: @yellow;
+  color: #f5c06f;
 }
 
 #battery.critical {
-  color: @red;
-  animation: battery-blink 0.8s infinite alternate;
+  color: #ff6b6b;
 }
 
-#custom-power {
-  color: @red;
+/* =========================
+   TRAY
+========================= */
 
-  margin-left: 10px;
+#tray {
+  padding: 0 10px;
 }
 
-#custom-power:hover {
-  color: @orange;
-  background-color: alpha(@orange, 0.12);
+/* =========================
+   TOOLTIPS
+========================= */
+
+tooltip {
+  background: @background;
+  border-radius: 12px;
+  border: 1px solid alpha(@foreground, 0.15);
 }
 
-/* =========================================================
- * ANIMATIONS
- * ========================================================= */
-
-@keyframes battery-blink {
-  to {
-    opacity: 0.45;
-  }
+tooltip label {
+  color: @foreground;
 }

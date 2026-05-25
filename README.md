@@ -107,7 +107,18 @@ sudo pacman -S --needed \
   zsh-autosuggestions \
   zsh-syntax-highlighting \
   wl-clipboard \
-  cliphist
+  cliphist \
+  btop \
+  pamixer \
+  pavucontrol \
+  brightnessctl \
+  bluez \
+  bluez-utils \
+  blueman \
+  playerctl \
+  network-manager-applet \
+  pacman-contrib \
+  ttf-jetbrains-mono-nerd
 ```
 
 ### Optional NVIDIA packages
@@ -201,7 +212,7 @@ makepkg -si
 Optional AUR apps:
 
 ```bash
-yay -S --needed helium-browser-bin vesktop
+yay -S --needed helium-browser-bin vesktop wttrbar
 ```
 
 ---

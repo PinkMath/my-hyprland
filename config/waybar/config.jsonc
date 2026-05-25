@@ -1,80 +1,150 @@
 {
+  "reload_style_on_change": true,
   "layer": "top",
   "position": "top",
-  "height": 28,
-
-  "margin-top": 0,
-  "margin-left": 300,
-  "margin-right": 300,
-
-  "spacing": 0,
-  "fixed-center": true,
+  "spacing": 6,
+  "height": 34,
 
   "modules-left": [
-    "pulseaudio",
-    "clock"
+    "custom/omarchy",
+    "hyprland/workspaces",
+    "hyprland/window"
   ],
 
   "modules-center": [
-    "hyprland/workspaces",
-    "custom/magic"
+    "mpris"
   ],
 
   "modules-right": [
+    "custom/weather",
+    "cpu",
+    "memory",
+    "backlight",
     "network",
+    "bluetooth",
+    "pulseaudio",
     "battery",
-    "custom/power"
+    "tray",
+    "clock"
   ],
-
-  "pulseaudio": {
-    "format": " {volume}%",
-    "format-muted": "󰖁 muted",
-    "tooltip": false,
-    "scroll-step": 5,
-    "on-click": "pavucontrol"
-  },
-
-  "clock": {
-    "format": "{:%H:%M}",
-    "tooltip": false
-  },
-
-  "custom/magic": {
-    "format": "󰣐",
-    "tooltip": false,
-    "on-click": "hyprctl dispatch togglespecialworkspace magic"
-  },
 
   "hyprland/workspaces": {
     "disable-scroll": true,
     "all-outputs": true,
     "format": "{icon}",
-    "format-icons": {
-      "active": "●",
-      "default": "●"
-    },
     "persistent-workspaces": {
-      "*": 4
+      "*": 5
     }
   },
 
+  "hyprland/window": {
+    "format": "{}",
+    "max-length": 55
+  },
+
+  "custom/omarchy": {
+    "format": "󰣇",
+    "tooltip": false,
+    "on-click": "wlogout --buttons-per-row 2"
+  },
+
+  "clock": {
+    "format": "  {:%H:%M}",
+    "format-alt": "  {:%d/%m/%Y}",
+    "tooltip-format": "<big>{:%A, %d %B %Y}</big>",
+    "interval": 1
+  },
+
+  "cpu": {
+    "format": " {usage}%",
+    "interval": 3,
+    "on-click": "kitty -e btop"
+  },
+
+  "memory": {
+    "format": " {}%",
+    "interval": 3,
+    "on-click": "kitty -e btop"
+  },
+
   "network": {
-    "format-wifi": "󰤨 {essid}",
-    "format-ethernet": "󰈀 wired",
-    "format-disconnected": "󰤭 offline",
-    "tooltip": false
+    "format-wifi": "  {signalStrength}%",
+    "format-ethernet": "󰈀 Connected",
+    "format-disconnected": "󰖪 Offline",
+    "tooltip-format": "{essid}",
+    "interval": 3,
+    "on-click": "kitty -e nmtui"
+  },
+
+  "bluetooth": {
+    "format": "",
+    "format-disabled": "󰂲",
+    "tooltip-format": "{device_alias}",
+    "on-click": "blueman-manager"
+  },
+
+  "pulseaudio": {
+    "format": "{icon} {volume}%",
+    "format-muted": "󰝟 Muted",
+    "scroll-step": 5,
+    "on-click": "pavucontrol",
+    "on-click-right": "pamixer -t",
+    "format-icons": {
+      "default": [
+        "",
+        "",
+        ""
+      ]
+    }
   },
 
   "battery": {
-    "format": "󰁹 {capacity}%",
+    "states": {
+      "warning": 25,
+      "critical": 10
+    },
+    "format": "{icon} {capacity}%",
     "format-charging": "󰂄 {capacity}%",
-    "format-plugged": "󰂄 {capacity}%",
-    "tooltip": false
+    "format-plugged": "",
+    "format-icons": [
+      "󰁺",
+      "󰁻",
+      "󰁼",
+      "󰁽",
+      "󰁾",
+      "󰁿",
+      "󰂀",
+      "󰂁",
+      "󰂂",
+      "󰁹"
+    ],
+    "interval": 5
   },
 
-  "custom/power": {
-    "format": "⏻",
-    "tooltip": false,
-    "on-click": "wlogout --buttons-per-row 2"
+  "backlight": {
+    "format": "󰃠 {percent}%"
+  },
+
+  "tray": {
+    "icon-size": 16,
+    "spacing": 10
+  },
+
+  "custom/weather": {
+    "format": "{}°",
+    "tooltip": true,
+    "interval": 600,
+    "exec": "wttrbar --nerd --location Sao Paulo",
+    "return-type": "json"
+  },
+
+  "mpris": {
+    "format": "{player_icon} {title}",
+    "format-paused": "󰏤 {title}",
+    "max-length": 40,
+    "player-icons": {
+      "default": "󰎆",
+      "mpv": "󰎆"
+    }
   }
 }
