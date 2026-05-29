@@ -101,7 +101,6 @@ sudo pacman -S --needed \
   eza \
   bat \
   zoxide \
-  btop \
   xdg-user-dirs \
   zsh \
   zsh-autosuggestions \
@@ -110,13 +109,12 @@ sudo pacman -S --needed \
   cliphist \
   btop \
   pamixer \
-  pavucontrol \
   brightnessctl \
   bluez \
   bluez-utils \
   blueman \
   playerctl \
-  network-manager-applet \
+  networkmanager \
   pacman-contrib \
   ttf-jetbrains-mono-nerd
 ```
@@ -494,6 +492,6 @@ or manually copy only the configs you want.
 
 ## Credits
 
-Made by [PinkMath](https://github.com/PinkMath).
+Made by [loavy](https://github.com/loavy).
 
 I use Arch BTW.
