@@ -1,150 +1,162 @@
+// Chill Work Waybar for Hyprland + Arch Linux
+// Calm, minimal, and made for staying focused.
+
 {
-  "reload_style_on_change": true,
   "layer": "top",
   "position": "top",
-  "spacing": 6,
   "height": 34,
+  "spacing": 6,
+  "margin-top": 7,
+  "margin-left": 10,
+  "margin-right": 10,
 
-  "modules-left": [
-    "custom/omarchy",
-    "hyprland/workspaces",
-    "hyprland/window"
-  ],
+  "modules-left": ["custom/magic", "hyprland/workspaces", "hyprland/submap"],
 
-  "modules-center": [
-    "mpris"
-  ],
+  "modules-center": ["hyprland/window"],
 
   "modules-right": [
-    "custom/weather",
+    "tray",
     "cpu",
     "memory",
-    "backlight",
-    "network",
-    "bluetooth",
     "pulseaudio",
+    "network",
     "battery",
-    "tray",
-    "clock"
+    "clock",
+    "custom/power"
   ],
 
   "hyprland/workspaces": {
-    "disable-scroll": true,
-    "all-outputs": true,
     "format": "{icon}",
+    "format-icons": {
+      "1": "1",
+      "2": "2",
+      "3": "3",
+      "4": "4",
+      "5": "5",
+      "6": "6",
+      "7": "7",
+      "8": "8",
+      "9": "9",
+      "10": "10",
+      "active": "●",
+      "default": "○",
+      "empty": "·",
+      "urgent": "!"
+    },
     "persistent-workspaces": {
       "*": 5
-    }
+    },
+    "on-click": "activate",
+    "sort-by-number": true
+  },
+
+  "custom/magic": {
+      "format": "󱗼",
+      "tooltip": true,
+      "tooltip-format": "Toggle magic workspace",
+      "on-click": "hyprctl dispatch togglespecialworkspace magic",
+      "on-click-right": "hyprctl dispatch movetoworkspace special:magic"
+    },
+
+  "hyprland/submap": {
+    "format": "󰌌 {}",
+    "max-length": 18,
+    "tooltip": false
   },
 
   "hyprland/window": {
     "format": "{}",
-    "max-length": 55
+    "max-length": 64,
+    "separate-outputs": true,
+    "rewrite": {
+      "(.*) — Mozilla Firefox": "󰈹  $1",
+      "(.*) - Chromium": "  $1",
+      "(.*) - Helium Browser": "  $1",
+      "(.*) - Visual Studio Code": "󰨞  $1",
+      "(.*) - Neovim": "  $1",
+      "(.*) - Spotify": "  $1",
+      "": "quiet workspace"
+    }
   },
 
-  "custom/omarchy": {
-    "format": "󰣇",
-    "tooltip": false,
-    "on-click": "wlogout --buttons-per-row 2"
-  },
-
-  "clock": {
-    "format": "  {:%H:%M}",
-    "format-alt": "  {:%d/%m/%Y}",
-    "tooltip-format": "<big>{:%A, %d %B %Y}</big>",
-    "interval": 1
+  "tray": {
+    "icon-size": 15,
+    "spacing": 8
   },
 
   "cpu": {
-    "format": " {usage}%",
     "interval": 3,
+    "format": "cpu {usage}%",
+    "tooltip": true,
     "on-click": "kitty -e btop"
   },
 
   "memory": {
-    "format": " {}%",
-    "interval": 3,
+    "interval": 5,
+    "format": "mem {percentage}%",
+    "tooltip-format": "RAM: {used:0.1f} / {total:0.1f} GiB",
     "on-click": "kitty -e btop"
-  },
-
-  "network": {
-    "format-wifi": "  {signalStrength}%",
-    "format-ethernet": "󰈀 Connected",
-    "format-disconnected": "󰖪 Offline",
-    "tooltip-format": "{essid}",
-    "interval": 3,
-    "on-click": "kitty -e nmtui"
-  },
-
-  "bluetooth": {
-    "format": "",
-    "format-disabled": "󰂲",
-    "tooltip-format": "{device_alias}",
-    "on-click": "blueman-manager"
   },
 
   "pulseaudio": {
     "format": "{icon} {volume}%",
-    "format-muted": "󰝟 Muted",
-    "scroll-step": 5,
-    "on-click": "pavucontrol",
-    "on-click-right": "pamixer -t",
+    "format-muted": "muted",
     "format-icons": {
-      "default": [
-        "",
-        "",
-        ""
-      ]
-    }
+      "headphone": "󰋋",
+      "headset": "󰋎",
+      "default": ["", "", ""]
+    },
+    "scroll-step": 4,
+    "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
+    "on-click-right": "pavucontrol",
+    "tooltip": true,
+    "tooltip-format": "{desc}"
+  },
+
+  "network": {
+    "interval": 5,
+    "format-wifi": "wifi {essid}",
+    "format-ethernet": "wired",
+    "format-disconnected": "offline",
+    "tooltip-format": "{ifname}\n{ipaddr}/{cidr}\nSignal: {signalStrength}%\nDown: {bandwidthDownBits}\nUp: {bandwidthUpBits}",
+    "on-click": "nm-connection-editor"
   },
 
   "battery": {
     "states": {
-      "warning": 25,
-      "critical": 10
+      "warning": 30,
+      "critical": 15
     },
     "format": "{icon} {capacity}%",
-    "format-charging": "󰂄 {capacity}%",
-    "format-plugged": "",
-    "format-icons": [
-      "󰁺",
-      "󰁻",
-      "󰁼",
-      "󰁽",
-      "󰁾",
-      "󰁿",
-      "󰂀",
-      "󰂁",
-      "󰂂",
-      "󰁹"
-    ],
-    "interval": 5
+    "format-charging": "charging {capacity}%",
+    "format-plugged": "plugged {capacity}%",
+    "format-alt": "{time}",
+    "format-icons": ["󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"]
   },
 
-  "backlight": {
-    "format": "󰃠 {percent}%"
-  },
-
-  "tray": {
-    "icon-size": 16,
-    "spacing": 10
-  },
-
-  "custom/weather": {
-    "format": "{}°",
-    "tooltip": true,
-    "interval": 600,
-    "exec": "wttrbar --nerd --location Sao Paulo",
-    "return-type": "json"
-  },
-
-  "mpris": {
-    "format": "{player_icon} {title}",
-    "format-paused": "󰏤 {title}",
-    "max-length": 40,
-    "player-icons": {
-      "default": "󰎆",
-      "mpv": "󰎆"
+  "clock": {
+    "interval": 1,
+    "format": "{:%H:%M}",
+    "format-alt": "{:%a, %d %b}",
+    "tooltip-format": "<tt><small>{calendar}</small></tt>",
+    "calendar": {
+      "mode": "month",
+      "weeks-pos": "right",
+      "on-scroll": 1,
+      "format": {
+        "months": "<span color='#d8cfc4'><b>{}</b></span>",
+        "days": "<span color='#c9c3bb'>{}</span>",
+        "weeks": "<span color='#8f8a84'>W{}</span>",
+        "weekdays": "<span color='#b7ada1'><b>{}</b></span>",
+        "today": "<span color='#1d1f21' background='#c8bfae'><b>{}</b></span>"
+      }
     }
+  },
+
+  "custom/power": {
+    "format": "⏻",
+    "tooltip": true,
+    "tooltip-format": "Power",
+    "on-click": "~/.config/waybar/scripts/power-menu.sh"
   }
 }

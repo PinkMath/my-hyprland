@@ -1,150 +1,240 @@
-@import "./colors.css";
+/*
+Chill Work Waybar
+Calm, soft, and focused. No gamer neon. No visual noise.
+Recommended font:
+sudo pacman -S ttf-jetbrains-mono-nerd
+*/
+
+/* Warm dark neutral palette */
+@define-color base rgba(24, 25, 26, 0.72);
+@define-color base-solid #18191a;
+@define-color mantle rgba(31, 32, 33, 0.86);
+@define-color surface #2a2b2d;
+@define-color surface-soft rgba(255, 255, 255, 0.045);
+@define-color border rgba(255, 255, 255, 0.075);
+
+@define-color text #d8d3ca;
+@define-color text-soft #b9b2a8;
+@define-color muted #7e7870;
+
+@define-color accent #c8bfae;
+@define-color accent-soft rgba(200, 191, 174, 0.16);
+@define-color green #a8b5a2;
+@define-color yellow #d1b98c;
+@define-color red #c38b88;
+@define-color blue #9baabc;
 
 * {
   border: none;
-  border-radius: 12px;
-  font-family: "JetBrainsMono Nerd Font";
-  font-size: 13px;
+  border-radius: 0;
   min-height: 0;
+  font-family: "JetBrainsMono Nerd Font", "JetBrains Mono", "Symbols Nerd Font", monospace;
+  font-size: 12.5px;
+  font-weight: 600;
 }
 
 window#waybar {
   background: transparent;
-  color: @foreground;
+  color: @text;
 }
-
-/* =========================
-   GLOBAL MODULE STYLE
-========================= */
-
-#clock,
-#battery,
-#cpu,
-#memory,
-#network,
-#bluetooth,
-#pulseaudio,
-#backlight,
-#tray,
-#custom-weather,
-#mpris,
-#window,
-#custom-omarchy {
-  background: alpha(@background, 0.92);
-  color: @foreground;
-  padding: 0 14px;
-  margin: 6px 0;
-  border: 1px solid alpha(@foreground, 0.08);
-  transition: all 0.25s ease;
-}
-
-/* =========================
-   HOVER EFFECT
-========================= */
-
-#clock:hover,
-#battery:hover,
-#cpu:hover,
-#memory:hover,
-#network:hover,
-#bluetooth:hover,
-#pulseaudio:hover,
-#backlight:hover,
-#custom-weather:hover,
-#mpris:hover,
-#custom-omarchy:hover {
-  background: @foreground;
-  color: @background;
-}
-
-/* =========================
-   LEFT MODULES
-========================= */
-
-#custom-omarchy {
-  padding: 0 16px;
-  font-size: 18px;
-  background: @foreground;
-  color: @background;
-}
-
-/* =========================
-   WORKSPACES
-========================= */
-
-#workspaces {
-  background: alpha(@background, 0.92);
-  padding: 4px;
-  margin: 6px 0;
-  border-radius: 14px;
-}
-
-#workspaces button {
-  color: alpha(@foreground, 0.5);
-  padding: 0 10px;
-  margin: 0 2px;
-  border-radius: 10px;
-  transition: all 0.2s ease;
-}
-
-#workspaces button.active {
-  background: @foreground;
-  color: @background;
-}
-
-#workspaces button:hover {
-  background: alpha(@foreground, 0.15);
-  color: @foreground;
-}
-
-/* =========================
-   WINDOW TITLE
-========================= */
-
-#window {
-  padding-left: 16px;
-  padding-right: 16px;
-}
-
-/* =========================
-   MEDIA
-========================= */
-
-#mpris {
-  padding: 0 18px;
-  min-width: 250px;
-}
-
-/* =========================
-   BATTERY STATES
-========================= */
-
-#battery.warning {
-  color: #f5c06f;
-}
-
-#battery.critical {
-  color: #ff6b6b;
-}
-
-/* =========================
-   TRAY
-========================= */
-
-#tray {
-  padding: 0 10px;
-}
-
-/* =========================
-   TOOLTIPS
-========================= */
 
 tooltip {
-  background: @background;
+  background: alpha(@base-solid, 0.96);
+  color: @text;
+  border: 1px solid @border;
   border-radius: 12px;
-  border: 1px solid alpha(@foreground, 0.15);
 }
 
 tooltip label {
-  color: @foreground;
+  padding: 8px 10px;
+  color: @text;
 }
+
+/* Shared pill style */
+#workspaces,
+#submap,
+#custom-magic,
+#window,
+#tray,
+#cpu,
+#memory,
+#pulseaudio,
+#network,
+#battery,
+#clock,
+#custom-power {
+  background: @base;
+  color: @text;
+  border: 1px solid @border;
+  border-radius: 12px;
+  padding: 0 10px;
+  margin: 0 2px;
+}
+
+/* Slightly quieter center title */
+#window {
+  background: rgba(24, 25, 26, 0.52);
+  color: @text-soft;
+  padding: 0 14px;
+  font-weight: 500;
+}
+
+/* Workspaces: clean and calm */
+#workspaces {
+  padding: 0 5px;
+}
+
+#custom-magic {
+  background: rgba(24, 25, 26, 0.72);
+  color: #c8bfae;
+  border: 1px solid rgba(255, 255, 255, 0.075);
+  border-radius: 12px;
+  padding: 0 11px;
+  margin: 0 2px;
+}
+
+#custom-magic:hover {
+  background: rgba(200, 191, 174, 0.16);
+  color: #d8d3ca;
+}
+
+#workspaces button {
+  background: transparent;
+  color: @muted;
+  border-radius: 9px;
+  padding: 0 7px;
+  margin: 5px 1px;
+  font-weight: 700;
+}
+
+#workspaces button:hover {
+  background: @surface-soft;
+  color: @text-soft;
+}
+
+#workspaces button.active,
+#workspaces button.focused {
+  background: @accent-soft;
+  color: @accent;
+  padding: 0 10px;
+}
+
+#workspaces button.empty {
+  color: rgba(216, 211, 202, 0.28);
+}
+
+#workspaces button.urgent {
+  background: rgba(195, 139, 136, 0.16);
+  color: @red;
+}
+
+/* Only appears when using a Hyprland submap */
+#submap {
+  color: @yellow;
+  background: rgba(209, 185, 140, 0.10);
+  border-color: rgba(209, 185, 140, 0.18);
+}
+
+/* Tray */
+#tray {
+  padding: 0 9px;
+}
+
+#tray menu {
+  background: @base-solid;
+  color: @text;
+  border: 1px solid @border;
+  border-radius: 12px;
+  padding: 7px;
+}
+
+/* Right modules */
+#cpu {
+  color: @blue;
+}
+
+#memory {
+  color: @accent;
+}
+
+#pulseaudio {
+  color: @text-soft;
+}
+
+#pulseaudio.muted {
+  color: @muted;
+}
+
+#network {
+  color: @green;
+}
+
+#network.disconnected {
+  color: @red;
+}
+
+#battery {
+  color: @green;
+}
+
+#battery.warning {
+  color: @yellow;
+}
+
+#battery.critical {
+  color: @red;
+  background: rgba(195, 139, 136, 0.10);
+  border-color: rgba(195, 139, 136, 0.22);
+}
+
+#battery.charging,
+#battery.plugged {
+  color: @blue;
+}
+
+#clock {
+  color: @accent;
+  background: @mantle;
+  padding: 0 13px;
+}
+
+#custom-power {
+  color: @muted;
+  padding: 0 12px;
+}
+
+#custom-power:hover {
+  color: @red;
+  background: rgba(195, 139, 136, 0.10);
+}
+
+/* Hover feedback: subtle, not flashy */
+#custom-launcher:hover,
+#clock:hover,
+#pulseaudio:hover,
+#network:hover,
+#battery:hover,
+#custom-updates:hover,
+#cpu:hover,
+#memory:hover {
+  background: @surface;
+}
+
+/* Optional: uncomment for an even flatter/no-transparency work setup */
+/*
+#custom-launcher,
+#workspaces,
+#submap,
+#window,
+#tray,
+#custom-updates,
+#cpu,
+#memory,
+#pulseaudio,
+#network,
+#battery,
+#clock,
+#custom-power {
+  background: #1f2021;
+}
+*/
